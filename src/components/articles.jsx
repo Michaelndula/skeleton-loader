@@ -21,7 +21,7 @@ const Articles = () => {
     return(
         <div className="articles">
             <h2>Articles</h2>
-            
+
             {articles && articles.map(article => (
                 <div className='article' key={ article.id }>
                     <h3>{article.title}</h3>
@@ -29,7 +29,7 @@ const Articles = () => {
                 </div>
             ))}
 
-            {!articles && [1, 2, 3, 4, 5].map((n) => <SkeletonArticle key={n} />)}
+            {!articles && [1, 2, 3, 4, 5].map((n) => <SkeletonArticle key={n} theme="dark"/>)}
         </div>
     );
 };
